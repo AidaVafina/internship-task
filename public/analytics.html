@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аналитика</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <a href="/" class="logo">
+            <img src="./assets/logo.svg" alt="Логотип" class="logo-image">
+        </a>
+        <nav>
+            <a href="/" id="home-link">Главная</a>
+            <a href="/analytics" id="analytics-link" class="active">Аналитика</a>
+        </nav>
+        <a href="/profile" class="profile">
+            <img src="./assets/ava40%202.svg" alt="Профиль" class="profile-image">
+        </a>
+    </div>
+</header>
+<main>
+    <div class="analytics-container">
+        <div class="device-header">
+            <div class="device-info">
+                <h1>pH-метр Mettler-Toledo International, Inc. SevenCompact S220</h1>
+                <p>S1.4.I14-9.001 · 00-024004</p>
+            </div>
+            <div class="device-actions">
+                <button class="in-work-button">
+                    В работе
+                    <img src="./assets/arrow_drop_down_24px.svg" alt="развернуть">
+                </button>
+                <button class="favorite-button">
+                    <img src="./assets/Like.svg" alt="лайк">
+                </button>
+                <button class="settings-button">
+                    <img src="./assets/settings.svg" alt="настройки">
+                </button>
+            </div>
+        </div>
+
+        <div class="filters">
+            <div class="work-button">
+                <button class="work-device-button">
+                    Работа прибора
+                    <span class="icon">
+                        <img src="./assets/Trailing%20items.svg" alt="разворот">
+                    </span>
+                </button>
+            </div>
+
+            <div class="date-and-export">
+                <div class="date-range">
+                    <input type="datetime-local" value="2021-10-07T10:55">
+                    <img src="./assets/Icon.svg" alt="стрелка">
+                    <input type="datetime-local" value="2021-10-21T10:55">
+                </div>
+                <div class="export-buttons">
+                    <button class="timer-button">
+                        <img src="./assets/off.svg" alt="вкл">
+                    </button>
+                    <button class="pdf-button">СОХРАНИТЬ PDF</button>
+                </div>
+            </div>
+
+            <div class="time-buttons">
+                <button>День</button>
+                <button>Неделя</button>
+                <button class="active">2 недели</button>
+                <button>Месяц</button>
+                <button>3 месяца</button>
+                <button>Полгода</button>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Начало</th>
+                <th>Тип работ</th>
+                <th>Работы</th>
+                <th>Результат</th>
+                <th>Пользователь</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="date-muted">09.10.2021, 15:46</td>
+                <td><span class="status in-work">В работе</span><br>Измерение</td>
+                <td><strong>Образец/серия:</strong>  000100057935_170000010325_0000251849</td>
+                <td><img src="./assets/color.svg" alt="Галочка" class="status-icon"></td>
+                <td class="username">morozovava</td>
+            </tr>
+            <tr>
+                <td class="date-muted">12.10.2021, 12:17</td>
+                <td><span class="status in-work">В работе</span><br>Калибровка</td>
+                <td>
+                    <strong>Номер колонки:</strong> Колонка 2<br>
+                    <strong>Образец/серия:</strong>  Образец 2<br>
+                    <strong>Метод:</strong>  метод тестовый<br>
+                    <strong>Номер колонки: </strong> Колонка 1
+                </td>
+                <td>
+                    <img src="./assets/color.svg" alt="Галочка" class="status-icon">
+                </td>
+                <td class="username">morozovava</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div id="analytics-data">
+        </div>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

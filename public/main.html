@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <a href="/" class="logo">
+            <img src="./assets/logo.svg" alt="Логотип" class="logo-image">
+        </a>
+
+        <nav>
+            <a href="/" id="home-link">Главная</a>
+            <a href="/analytics" id="analytics-link">Аналитика</a>
+        </nav>
+
+        <a href="/profile" class="profile">
+            <img src="./assets/ava40%202.svg" alt="Профиль" class="profile-image">
+        </a>
+    </div>
+</header>
+<main>
+    <div class="table-container">
+        <form class="search-form">
+            <input type="text" class="search-input" placeholder="Поиск прибора в Botanique по номеру, названию, подразделению и др.">
+            <img src="./assets/qr_code_scanner-24px.svg" class="search-logo" alt="Logo">
+        </form>
+
+        <h1 class="text-medium-emphasis">
+            <img src="./assets/favorite.png" alt="Иконка" class="header-icon">
+            Любимые приборы
+        </h1>
+        <table>
+            <thead>
+            <tr>
+                <th class="text-medium-emphasis">Название</th>
+                <th class="text-medium-emphasis">Статус</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="text-medium-emphasis">pH-метр Mettler-Toledo International, Inc. SevenCompact S220</td>
+                <td class="text-medium-emphasis">Свободен</td>
+            </tr>
+            <tr>
+                <td class="text-medium-emphasis">Спектрофотометр Varian, Inc Cary 50 Bio</td>
+                <td class="text-medium-emphasis">Свободен</td>
+            </tr>
+            <tr>
+                <td class="text-medium-emphasis">Титратор</td>
+                <td class="text-medium-emphasis">Свободен</td>
+            </tr>
+            <tr>
+                <td class="text-medium-emphasis">Коагулометр Tcoag, KC 4 Delta</td>
+                <td class="text-medium-emphasis">Свободен</td>
+            </tr>
+            <tr>
+                <td class="text-medium-emphasis">Коагулометр Tcoag, KC 4 Delta</td>
+                <td class="text-medium-emphasis">Свободен</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

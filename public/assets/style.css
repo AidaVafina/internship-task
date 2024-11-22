@@ -1,0 +1,392 @@
+:root {
+    --primary-color: #333;
+    --background-color: #f4f4f4;
+    --border-color: #ddd;
+    --active-color: #0fad40;
+    --font-family: 'Roboto', sans-serif;
+    --text-color: #333333;
+    --secondary-color: #f0f0f0;
+}
+
+body {
+    font-family: var(--font-family), serif;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 0;
+}
+
+header {
+    background-color: #ffffff; /* Шапка становится белой */
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd; /* Добавим легкую границу для отделения */
+}
+
+/* Шапка */
+
+.header-container {
+    display: flex;
+    padding: 0 10px;
+    justify-content: space-between; /* Распределение: логотип, центр, профиль */
+    align-items: center; /* Выравнивание по вертикали */
+    margin-top: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-image {
+    width: 160px; /* Размер логотипа */
+    height: 40px;
+}
+
+nav {
+    display: flex;
+    gap: 2rem; /* Расстояние между ссылками */
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+nav a.active {
+    color: #0fad40; /* Зеленый цвет для активной страницы */
+    font-weight: bold; /* Жирный текст (опционально) */
+}
+
+nav a.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+}
+
+
+nav a:hover {
+    color: darkolivegreen; /* Цвет при наведении */
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Круглая форма */
+    overflow: hidden; /* Скрыть края картинки */
+    border: 1px solid #ddd; /* Легкая граница */
+    background-color: #f4f4f4; /* Цвет фона кружка */
+    text-decoration: none;
+}
+
+.profile-image {
+    width: 100%; /* Картинка занимает весь кружок */
+    height: 100%;
+    object-fit: cover; /* Центрируем картинку */
+}
+
+main {
+    padding: 2rem;
+}
+
+.table-container {
+
+    width: 60%; /* Общая ширина контейнера */
+    margin: 50px auto; /* Центрируем контейнер */
+
+}
+
+.search-form {
+    width: 100%; /* Ширина формы равна ширине контейнера */
+    margin-bottom: 4.5rem; /* Отступ снизу для разделения с заголовком */
+    position: relative;
+    font-weight: lighter;
+}
+
+
+.search-input {
+    width: 100%; /* Ширина поля ввода соответствует ширине контейнера */
+    padding: 0.85rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: transparent; /* Прозрачный фон */
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100; /* Тонкий шрифт */
+    box-sizing: border-box;
+}
+
+.search-logo {
+    position: absolute;
+    right: 10px; /* Позиционируем логотип в правый край */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.5rem; /* Можно настроить размер логотипа */
+    height: auto;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem; /* Отступ между заголовком и таблицей */
+}
+
+.header-icon {
+    margin-right: 0.5rem; /* Отступ справа от иконки */
+    width: 24px;
+    height: 24px;
+}
+
+table {
+    width: 100%; /* Таблица занимает всю ширину контейнера */
+    border-collapse: collapse;
+    background-color: #ffffff; /* Таблица полностью белая */
+    }
+
+table th, table thead {
+    box-shadow: none; /* Убираем возможные тени */
+    color: rgba(0, 0, 0, 0.38);
+}
+
+
+table td:first-child {
+    color: black; /* Черный цвет текста для первой ячейки (названия приборов) */
+    font-weight: 350;
+}
+
+
+table th {
+    background-color: #ffffff;
+}
+
+table thead tr {
+    border-top: none; /* Убираем верхнюю линию у заголовка */
+    border-bottom: none; /* Убираем нижнюю линию у заголовка, если она есть */
+}
+
+
+.header-icon {
+    margin-right: 1.5rem;
+    width: 24px;
+    height: 24px;
+}
+
+
+/* Аналитика */
+
+.analytics-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 20px 50px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 700px;
+}
+
+.device-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.device-info h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.device-info p {
+    margin: 5px 0 0;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.device-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.in-work-button {
+    display: inline-flex; /* Устанавливаем flex-контейнер для кнопки */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    justify-content: center; /* Центруем элементы внутри кнопки */
+    gap: 8px; /* Добавляем расстояние между текстом и иконкой */
+    padding: 10px 15px;
+    border: 1px solid #0fad40;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #0fad40;
+    font-size: 16px; /* Размер текста */
+    cursor: pointer;
+}
+
+.in-work-button img {
+    width: 16px; /* Задаем размер иконки */
+    height: 16px;
+}
+
+.favorite-button,
+.settings-button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column; /* Все элементы располагаются вертикально */
+    gap: 20px; /* Расстояние между секциями */
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.work-button {
+    display: flex;
+    justify-content: flex-start; /* Выровнять кнопку по левому краю */
+}
+
+.work-device-button {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Расстояние между текстом и иконкой */
+    padding: 10px 10px;
+    border: none;
+    border-radius: 4px;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: -20px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.work-device-button .icon {
+    font-size: 1rem; /* Размер иконки */
+}
+
+.date-range {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Расстояние между полями ввода даты */
+}
+
+.date-and-export {
+    display: flex;
+    justify-content: space-between; /* Пространство между двумя секциями */
+    align-items: center; /* Выравнивание по высоте */
+    width: 100%; /* Растянуть секции по ширине контейнера */
+}
+
+.date-range input {
+    padding: 5px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.time-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Расстояние между кнопками */
+}
+
+.time-buttons button {
+    padding: 10px 15px;
+    margin-right: 0;
+    border: none;
+    background: var(--secondary-color);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.time-buttons .active {
+    background: #C2E7C8;
+    color: var(--primary-color);
+}
+
+.date-range {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Расстояние между полями ввода даты */
+}
+
+.export-buttons {
+    display: flex;
+    gap: 10px; /* Расстояние между кнопками */
+}
+
+.export-buttons button {
+    padding: 15px 20px;
+    margin-left: 10px;
+    border: 1px solid var(--border-color);
+    background: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #0fad40;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.tbody td {
+    padding: 60px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.status.in-work {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.tbody td span.status {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.analytics-container table th {
+    color: rgba(0, 0, 0, 0.38);
+}
+
+/* текст цвета */
+table tr {
+    background-color: #ffffff;
+    border-top: 1px solid var(--border-color);
+
+    color: rgba(0, 0, 0, 0.6);
+}
+
+table th, table td {
+    border: none;
+    padding: 1.5rem 1rem;
+    text-align: left;
+    position: relative;
+    font-weight: 400;
+
+}
+
+.status-icon {
+    width: 20px; /* Размер иконки */
+    height: 20px;
+    vertical-align: middle; /* Выравнивание по вертикали */
+}
+
+
+.username {
+    color: #2E9BC2;
+}
+
+.date-muted {
+    color: rgba(0, 0, 0, 0.38);
+}
+
+
