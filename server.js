@@ -9,7 +9,6 @@ app.listen(PORT, () => {
     console.log(`Сервер запущен: http://localhost:${PORT}`);
 });
 
-
 // public статической
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
